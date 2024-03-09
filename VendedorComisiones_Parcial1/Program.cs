@@ -19,7 +19,7 @@ namespace VendedorComisiones_Parcial1
             const double PORCENTAJE_COMISION = 0.10;
             const double BENEFICIO_EXTRA = 100000;
             const double OBJETIVO_VENTAS = 1000000;
-
+            int i;
 
             // entrada de datos
             Console.WriteLine(" Inngrese sueldo base del vendedor$");
@@ -27,7 +27,7 @@ namespace VendedorComisiones_Parcial1
 
             for (int i = 0; i < ventas.Length; i++);
             {
-                Console.WriteLine($"Ingrese el valor de la venta{i+1}:$");
+                Console.WriteLine($"Ingrese el valor de la venta{ i+1 }:$");
                 ventas[i]=double.Parse(Console.ReadLine());
             }
 
@@ -53,7 +53,11 @@ namespace VendedorComisiones_Parcial1
             {
                 sueldoFinal += BENEFICIO_EXTRA;
                 Console.WriteLine("Felicidades has ganado el beneficio extra de $ 100.000.");
-                Console.WriteLine($"El sueldo final con el beneficio es:$"{sueldoFinal});
+                Console.WriteLine($"El sueldo final con el beneficio es:${sueldoFinal}");
+            }
+            else 
+            {
+                Console.WriteLine("No has alcanzado el objetivo de ventas");
             }
         }
     }
